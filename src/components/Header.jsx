@@ -24,6 +24,7 @@ function Header() {
       // http://47.93.114.103:6688/
       setAvatar('http://47.93.114.103:6688/'+newAvatar)
     }
+    // eslint-disable-next-line
   }, [localStorage.getItem('avatar')])
 
   //退出登录
