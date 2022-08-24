@@ -1,9 +1,14 @@
 import  ReactDOM  from "react-dom";
-import "./assets/base.css"
+import "./assets/base.less"
+import store from "./store";
+import { Provider } from "react-redux";
 
 import Router from "./router"
 
 ReactDOM.render(
-  <Router />,
+  
+  <Provider store={store}>
+    <Router />
+  </Provider>,
   document.getElementById("root")
 )

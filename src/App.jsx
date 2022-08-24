@@ -1,13 +1,27 @@
-import React from 'react'
-import { Button } from 'antd';
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Layout } from "antd";
+import Header from "./components/Header";
+import Aside from "./components/Aside";
+import Bread from "./components/Bread";
 
-export default function App() {
+function App() {
   return (
-    <>
-    <Outlet />
-      <div>大大大</div>
-      <Button type="primary" shape="round">Button</Button>
-    </>
-  )
+    <Layout id="app">
+      <Header></Header>
+      <div className="container">
+        <Aside></Aside>
+        <div className="container_box">
+          <Bread />
+          <div className="container_content">
+            <Outlet />
+          </div>
+        </div>
+      </div>
+      <footer>Respect | Copyright &copy; 2022 Author 李竞伟</footer>
+    </Layout>
+  );
 }
+
+
+export default App
